@@ -16,7 +16,7 @@
                         <h3>use your account</h3>
                     </div>
 
-                    <div class="mb-4">
+                    <div class="mb-4 w-[26rem]">
                         <label for="email" class="text-sm">E-mail</label>
                         <input type="email" name="email" id="email" class="w-full border border-gray-300 p-2 rounded-md">
                     </div>
@@ -26,11 +26,20 @@
                         <input type="password" name="password" id="password" class="w-full border border-gray-300 p-2 rounded-md">
                     </div>
 
-                    <div class="mb-4">
-
+                    <div class="mb-4 flex justify-center gap-5">
+                        <a href="#">
+                            <ion-icon name="mail-outline" size="large"></ion-icon>
+                        </a>
+                        <a href="#">
+                            <ion-icon name="logo-google" size="large"></ion-icon>
+                        </a>
+                        <a href="#">
+                            <ion-icon name="logo-facebook" size="large"></ion-icon>
+                        </a>
                     </div>
 
-                    <div>
+
+                    <div class="flex justify-center">
                         <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Registrar-se</button>
                     </div>
                 </form>
