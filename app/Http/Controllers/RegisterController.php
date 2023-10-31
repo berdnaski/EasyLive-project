@@ -7,7 +7,7 @@ use App\Models\User;
 class RegisterController extends Controller
 {
     public function index() {
-        return view('auth.register');
+        return view('Auth.register');
     }
     public function register(Request $request) {
         try {
@@ -21,7 +21,7 @@ class RegisterController extends Controller
                     'name' => $request->name,
                     'email' => $request->email,
                     'password' => $request->password,
-                    'product' => 'EasyLink',
+                    'product' => 'EasyLive',
                     'billing_plan' => 'free',
                 ],
             ])->getBody(), true);
@@ -34,7 +34,7 @@ class RegisterController extends Controller
                 'auth_token' => $response['auth_token'],
             ]);
             \Auth::login($user);
-            return redirect()->route('links');
+            return redirect()->route('register');
         } catch (\Throwable $exception) {
             Log::create([
                 'activity' => 'An error occurred in the register function.',
@@ -42,7 +42,7 @@ class RegisterController extends Controller
                 'status' => 'error',
                 'response' => $exception,
             ]);
-            return redirect()->route('register-page')->with('error', 'An unknown error occurred, please try again later!');
+            return redirect()->route('register')->with('error', 'An unknown error occurred, please try again later!');
         }
     }
 }

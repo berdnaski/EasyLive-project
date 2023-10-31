@@ -9,7 +9,7 @@
                 <div class="flex justify-center">
                     <h1 class="text-5xl lg:text-7xl font-bold flex justify-center">Sign In</h1>
                 </div>
-                <form method="POST" action="">
+                <form method="POST" action="{{route('register')}}">
                     @csrf
 
                     <div class="mb-4 flex justify-center mt-5">

@@ -24,7 +24,7 @@ class LoginController extends Controller
                 'query' => [
                     'email' => $request->email,
                     'password' => $request->password,
-                    'product' => 'EasyLink',
+                    'product' => 'EasyLive',
                 ],
             ])->getBody(), true);
             if($response['status'] == 'error') {
