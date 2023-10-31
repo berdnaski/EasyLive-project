@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +14,5 @@ use App\Http\Controllers\Auth\RegisterController;
 |
 */
 
-Route::get('/register', [RegisterController::class, 'index'])->name('register');
-Route::post('/register', [RegisterController::class, 'register']);
+Route::get('/register', [RegisterController::class, 'index'])->name('register-page');
+Route::post('/register', [RegisterController::class, 'register'])->name('register');

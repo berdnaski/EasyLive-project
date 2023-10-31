@@ -5,7 +5,7 @@
 @section('content')
 <div class="flex justify-center items-center h-screen ">
         <div class="flex">
-            <div class="bg-gray-300 p-6 rounded-lg lg:rounded-tl lg:rounded-bl shadow-md lg:w-[40rem] lg:h-[50rem] w-[23rem] h-[30rem] justify-center flex flex-col items-center">
+            <div class="bg-gray-300 p-6 rounded-lg lg:rounded-r-none lg:rounded-tl lg:rounded-bl shadow-md lg:w-[40rem] lg:h-[50rem] w-[23rem] h-[30rem] justify-center flex flex-col items-center">
                 <div class="flex justify-center">
                     <h1 class="text-5xl lg:text-7xl font-bold flex justify-center">Sign In</h1>
                 </div>
@@ -17,6 +17,12 @@
                     </div>
 
                     <div class="flex flex-col mb-2">
+
+                        <div class="mb-4 w-[18rem]">
+                            <label for="name" class="text-sm lg:text-lg lg:font-semibold">Nome</label>
+                            <input type="name" name="name" id="name" class="w-full border border-gray-500 p-2 rounded-md bg-transparent">
+                        </div>
+
                         <div class="mb-4 w-[18rem]">
                             <label for="email" class="text-sm lg:text-lg lg:font-semibold">E-mail</label>
                             <input type="email" name="email" id="email" class="w-full border border-gray-500 p-2 rounded-md bg-transparent">

@@ -1,5 +1,5 @@
 <?php
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Log;
@@ -7,7 +7,7 @@ use App\Models\User;
 class RegisterController extends Controller
 {
     public function index() {
-        return view('Auth.register');
+        return view('auth.register');
     }
     public function register(Request $request) {
         try {
@@ -21,10 +21,11 @@ class RegisterController extends Controller
                     'name' => $request->name,
                     'email' => $request->email,
                     'password' => $request->password,
-                    'product' => 'EasyLive',
+                    'product' => 'EasyLink',
                     'billing_plan' => 'free',
                 ],
             ])->getBody(), true);
+            dd($response);
             if($response['status'] == 'error') {
                 return redirect()->route('register')->with('message', $response['message']);
             }
@@ -34,7 +35,7 @@ class RegisterController extends Controller
                 'auth_token' => $response['auth_token'],
             ]);
             \Auth::login($user);
-            return redirect()->route('register');
+            return redirect()->route('links');
         } catch (\Throwable $exception) {
             Log::create([
                 'activity' => 'An error occurred in the register function.',
@@ -42,7 +43,7 @@ class RegisterController extends Controller
                 'status' => 'error',
                 'response' => $exception,
             ]);
-            return redirect()->route('register')->with('error', 'An unknown error occurred, please try again later!');
+            return redirect()->route('register-page')->with('error', 'An unknown error occurred, please try again later!');
         }
     }
 }

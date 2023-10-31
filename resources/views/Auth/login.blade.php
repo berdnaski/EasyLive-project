@@ -5,11 +5,11 @@
 @section('content')
 <div class="flex justify-center items-center h-screen ">
         <div class="flex">
-            <div class="bg-gray-300 p-6 rounded-lg lg:rounded-tl lg:rounded-bl shadow-md lg:w-[40rem] lg:h-[50rem] w-[23rem] h-[30rem] justify-center flex flex-col items-center">
+            <div class="bg-gray-300 p-6 rounded-lg lg:rounded-r-none lg:rounded-tl lg:rounded-bl shadow-md lg:w-[40rem] lg:h-[50rem] w-[23rem] h-[30rem] justify-center flex flex-col items-center">
                 <div class="flex justify-center">
                     <h1 class="text-5xl lg:text-7xl font-bold flex justify-center">Sign In</h1>
                 </div>
-                <form method="POST" action="">
+                <form method="POST" action="{{route('register')}}">
                     @csrf
 
                     <div class="mb-4 flex justify-center mt-5">
