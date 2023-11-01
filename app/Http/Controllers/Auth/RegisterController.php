@@ -35,7 +35,7 @@ class RegisterController extends Controller
                 'auth_token' => $response['auth_token'],
             ]);
             \Auth::login($user);
-            return redirect()->route('login-page');
+            return redirect()->route('dashboard');
         } catch (\Throwable $exception) {
             Log::create([
                 'activity' => 'An error occurred in the register function.',
