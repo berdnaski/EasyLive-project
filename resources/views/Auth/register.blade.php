@@ -75,7 +75,7 @@
                     </div>
 
                     <div class="flex justify-center mx-5 my-5">
-                        <button type="submit" class="border-2 border-white text-white text-3xl py-3 px-5 rounded-3xl font-bold">SIGN IN</button>
+                        <a href="" class="border-2 border-white text-white text-3xl py-3 px-5 rounded-3xl font-bold">SIGN IN</a>
                     </div>
                 </div>
             </div>

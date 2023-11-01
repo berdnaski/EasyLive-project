@@ -1,5 +1,5 @@
 <?php
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Log;
@@ -25,7 +25,7 @@ class RegisterController extends Controller
                     'billing_plan' => 'free',
                 ],
             ])->getBody(), true);
-            dd($response);
+            dd('chegou');
             if($response['status'] == 'error') {
                 return redirect()->route('register')->with('message', $response['message']);
             }

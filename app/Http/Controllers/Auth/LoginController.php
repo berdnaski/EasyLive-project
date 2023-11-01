@@ -11,7 +11,7 @@ class LoginController extends Controller
         if(\Auth::check()) {
             return redirect()->route('links');
         }
-        return view('auth.login');
+        return view('Auth.login');
     }
     public function login(Request $request) {
         try {

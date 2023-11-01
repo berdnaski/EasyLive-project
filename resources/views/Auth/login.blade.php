@@ -9,7 +9,7 @@
                 <div class="flex justify-center">
                     <h1 class="text-5xl lg:text-7xl font-bold flex justify-center">Sign In</h1>
                 </div>
-                <form method="POST" action="{{route('register')}}">
+                <form method="POST" action="{{route('login')}}">
                     @csrf
 
                     <div class="mb-4 flex justify-center mt-5">
@@ -49,7 +49,7 @@
                     </div>
 
                     <div class="mb-4 flex justify-center mt-3">
-                        <a href="" class="text-red-900 lg:text-lg underline">Doesn't has an account?</a>
+                        <a href="{{ route('register-page') }}" class="text-red-900 lg:text-lg underline">Doesn't has an account?</a>
                     </div>
                 </form>
             </div>
@@ -65,11 +65,11 @@
                     </div>
 
                     <div class="flex justify-center mx-5 my-5">
-                        <a href="" class="text-white lg:text-xl">Doesn't has an account?</a>
+                        <p class="text-white lg:text-xl">Doesn't has an account?</p>
                     </div>
 
                     <div class="flex justify-center mx-5 my-5">
-                        <button type="submit" class="border-2 border-white text-white text-3xl py-3 px-5 rounded-3xl font-bold">SIGN IN</button>
+                        <a href="{{ route('register-page') }}" class="border-2 border-white text-white text-3xl py-3 px-5 rounded-3xl font-bold">SIGN UP</a>
                     </div>
                 </div>
             </div>
