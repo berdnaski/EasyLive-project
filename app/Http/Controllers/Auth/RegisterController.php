@@ -21,11 +21,11 @@ class RegisterController extends Controller
                     'name' => $request->name,
                     'email' => $request->email,
                     'password' => $request->password,
-                    'product' => 'EasyLink',
+                    'product' => 'EasyLive',
                     'billing_plan' => 'free',
                 ],
             ])->getBody(), true);
-            dd('chegou');
+
             if($response['status'] == 'error') {
                 return redirect()->route('register')->with('message', $response['message']);
             }
@@ -35,7 +35,7 @@ class RegisterController extends Controller
                 'auth_token' => $response['auth_token'],
             ]);
             \Auth::login($user);
-            return redirect()->route('links');
+            return redirect()->route('login-page');
         } catch (\Throwable $exception) {
             Log::create([
                 'activity' => 'An error occurred in the register function.',

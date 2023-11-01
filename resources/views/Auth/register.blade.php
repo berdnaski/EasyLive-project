@@ -5,7 +5,7 @@
 @section('content')
 <div class="flex justify-center items-center h-screen ">
         <div class="flex">
-            <div class="bg-gray-300 p-6 rounded-lg lg:rounded-r-none lg:rounded-tl lg:rounded-bl shadow-md lg:w-[40rem] lg:h-[50rem] w-[23rem] h-[35rem] justify-center flex flex-col items-center">
+            <div class="bg-gray-300 p-6 rounded-lg lg:rounded-r-none lg:rounded-tl lg:rounded-bl shadow-md lg:w-[40rem] lg:h-[50rem] w-[23rem] h-[3rem] justify-center flex flex-col items-center">
                 <div class="flex justify-center">
                     <h1 class="text-5xl lg:text-7xl font-bold flex justify-center">Sign In</h1>
                 </div>
@@ -33,6 +33,9 @@
                             <input type="password" name="password" id="password" class="w-full border border-gray-500 p-2 rounded-md bg-transparent">
                         </div>
 
+                        <div class="mb-4 flex justify-end">
+                            <a href="" class="text-sm underline">Forgot your password?</a>
+                        </div>
                     </div>
 
                     <div class="mb-4 flex justify-center gap-5 mt-2">
@@ -48,11 +51,11 @@
                     </div>
 
                     <div class="flex justify-center">
-                        <a href="{{ route('login-page') }}" class="bg-red-500 text-white py-3 px-5 rounded-xl font-bold hover:bg-red-600">SIGN UP</a>
+                        <button type="submit" class="bg-red-500 text-white py-3 px-5 rounded-xl font-bold hover:bg-red-600">SIGN IN</button>
                     </div>
 
                     <div class="mb-4 flex justify-center mt-3">
-                        <a href="{{ route('login-page') }}" class="text-red-900 lg:text-lg underline">You already have an account?</a>
+                        <a href="" class="text-red-900 lg:text-lg underline">Doesn't has an account?</a>
                     </div>
                 </form>
             </div>
@@ -68,11 +71,11 @@
                     </div>
 
                     <div class="flex justify-center mx-5 my-5">
-                        <p class="text-white lg:text-xl">You already have an account?</p>
+                        <a href="" class="text-white lg:text-xl">Doesn't has an account?</a>
                     </div>
 
                     <div class="flex justify-center mx-5 my-5">
-                        <a href="{{ route('login-page') }}" class="border-2 border-white text-white text-3xl py-3 px-5 rounded-3xl font-bold">SIGN IN</a>
+                        <a href="" class="border-2 border-white text-white text-3xl py-3 px-5 rounded-3xl font-bold">SIGN IN</a>
                     </div>
                 </div>
             </div>
