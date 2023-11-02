@@ -20,10 +20,13 @@ use App\Http\Controllers\Users\TicketGateController;
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
+
     Route::get('/tracking', [TrackingController::class, 'index'])->name('tracking-page');
     Route::post('/tracking', [TrackingController::class, 'tracking'])->name('tracking-page');
+
     Route::get('/form', [TicketGateController::class, 'index'])->name('ticket_gate-page');
-    Route::post('/save', [TicketGateController::class, 'ticket_gate'])->name('ticket_gate');
+    Route::post('/save', [TicketGateController::class, 'store'])->name('ticket_gate-store');
+
 });
 
 Route::get('/register', [RegisterController::class, 'index'])->name('register-page');

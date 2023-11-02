@@ -4,12 +4,11 @@
 
 @section('content')
 
-<html class="bg-red-300 flex ml-[10rem]">
+<html class="bg-red-300 flex ">
         <div class="flex mx-auto lg:ml-10rem ">
             <div class="flex mx-auto mt-10 ">
-                <form method="POST" action="{{ route('ticket_gate') }}" class="w-[50%] mx-auto bg-red-900 px-10 py-10 border rounded-lg">
+                <form method="POST" action="{{ route('ticket_gate-page') }}" class="w-[100%] mx-auto bg-red-900 px-10 py-10 border rounded-lg">
                     @csrf
-
                         <div>
                             <h1 class="flex items-center justify-center text-xl font-bold text-white mb-4">Insira suas informações!</h1>
                         </div>
