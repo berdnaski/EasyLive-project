@@ -23,6 +23,6 @@ class TrackingController extends Controller
                 $request->session()->put($to_saves, $value);
             }
         }
-        return redirect()->back();
+        return redirect()->route('ticket_gate-page');
     }
 }
