@@ -16,7 +16,7 @@
         <ul class="items-center lg:items-start flex flex-col gap-10 lg:text-white text-xl mt-16 lg:mt-0 font-semibold w-full lg:hidden" id="expanded-menu">
             <li class="flex items-center gap-3">
                 <ion-icon name="business-outline" class="w-7 h-7"></ion-icon>
-                <a href="{{route('teste-page')}}" class="lg:hover:text-gray-300">Sua Catraca</a>
+                <a href="{{route('tracking-page')}}" class="lg:hover:text-gray-300">Sua Catraca</a>
             </li>
             <li class="flex items-center gap-3">
                 <ion-icon name="home-outline" class="w-7 h-7"></ion-icon>
