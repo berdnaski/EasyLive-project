@@ -6,6 +6,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Users\TrackingController;
 use App\Http\Controllers\Users\TicketGateController;
+use App\Http\Controllers\Users\LiveController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +26,13 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/tracking', [TrackingController::class, 'tracking'])->name('tracking-page');
 
     Route::get('/form', [TicketGateController::class, 'index'])->name('ticket_gate-page');
-    Route::post('/save', [TicketGateController::class, 'store'])->name('ticket_gate-store');
+    Route::post('/form', [TicketGateController::class, 'store'])->name('ticket_gate-store');
+
+    Route::get('/lives', [LiveController::class, 'index'])->name('live-index');
+    Route::get('/live/create', [LiveController::class, 'create'])->name('live-create');
+    Route::post('/live', [LiveController::class, 'store'])->name('live-store');
+    Route::get('/lives/{id}', [LiveController::class, 'show'])->name('live-show');
+    Route::delete('/lives/{id}', [LiveController::class, 'destroy'])->name('live-destroy');
 
 });
 

@@ -32,6 +32,6 @@ class TicketGateController extends Controller
             'email' => $request->email,
         ]);
 
-        return redirect()->route('ticket_gate-page');
+        return redirect()->route('live-index');
     }
 }

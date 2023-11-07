@@ -20,15 +20,15 @@
             </li>
             <li class="flex items-center gap-3">
                 <ion-icon name="home-outline" class="w-7 h-7"></ion-icon>
-                <a href="{{ route('login-page') }}" class="lg:hover:text-gray-300">Suas Lives</a>
+                <a href="{{ route('live-create') }}" class="lg:hover:text-gray-300">Criar Live</a>
             </li>
             <li class="flex items-center gap-3">
                 <ion-icon name="bed-outline" class="w-7 h-7"></ion-icon>
-                <a href="{{ route('dashboard') }}" class="lg:hover:text-gray-300">Seu Perfil</a>
+                <a href="{{ route('dashboard') }}" class="lg:hover:text-gray-300">Ver sua live</a>
             </li>
             <li class="flex items-center gap-3">
                 <ion-icon name="person-outline" class="w-7 h-7"></ion-icon>
-                <a href="{{ route('dashboard') }}" class="lg:hover:text-gray-300">Suporte</a>
+                <a href="{{ route('dashboard') }}" class="lg:hover:text-gray-300">Seu Perfil</a>
             </li>
             <li class="flex items-center gap-3">
                 <ion-icon name="call-outline" class="w-7 h-7"></ion-icon>
