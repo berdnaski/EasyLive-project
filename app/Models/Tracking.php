@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Live extends Model
+class Tracking extends Model
 {
-    protected $fillable = ['user_id', 'title', 'description', 'url', 'youtube_url'];
-    protected $primaryKey = 'id';
-    protected $table = 'live_streams';
+    use HasFactory;
+
+    protected $fillable = ['name', 'phone', 'email', 'user_id', 'token'];
 
     public function user()
     {

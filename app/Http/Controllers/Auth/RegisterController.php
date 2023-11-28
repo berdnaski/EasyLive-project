@@ -17,6 +17,7 @@ class RegisterController extends Controller
                 'headers' => [
                     'Token' => env("API_BLT_TOKEN"),
                 ],
+
                 'query' => [
                     'name' => $request->name,
                     'email' => $request->email,
@@ -29,11 +30,13 @@ class RegisterController extends Controller
             if($response['status'] == 'error') {
                 return redirect()->route('register')->with('message', $response['message']);
             }
+
             $user = User::create([
                 'name' => $request->name,
                 'email' => $request->email,
                 'auth_token' => $response['auth_token'],
             ]);
+
             \Auth::login($user);
             return redirect()->route('dashboard');
         } catch (\Throwable $exception) {

@@ -24,7 +24,7 @@
                         <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
                     </div>
 
-                    <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+                    <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg lg:w-full">
                         <div class="bg-red-900 w-[20rem] px-4 pt-5 pb-4 sm:p-6 sm:pb-4 relative lg:w-full">
                             <div class="flex flex-row items-center justify-between">
                                 <div class="sm:flex sm:items-start mb-5">

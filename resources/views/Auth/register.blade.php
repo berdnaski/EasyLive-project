@@ -51,7 +51,7 @@
                     </div>
 
                     <div class="flex justify-center">
-                        <button type="submit" class="bg-red-500 text-white py-3 px-5 rounded-xl font-bold hover:bg-red-600">SIGN IN</button>
+                        <button type="submit" class="bg-red-500 text-white py-3 px-5 rounded-xl font-bold hover:bg-red-600">SIGN UP</button>
                     </div>
 
                     <div class="mb-4 flex justify-center mt-3">

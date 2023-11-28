@@ -4,12 +4,17 @@ namespace App\Http\Controllers\Users;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+use App\Models\User;
 use App\Models\Live;
+use Auth;
 
 class LiveController extends Controller
 {
     public function index() {
-        $live_streams = Live::all();
+        $user = auth()->user();
+
+        $live_streams = Live::where('user_id', $user->id)->get();
 
         return view('live.index', ['live_streams' => $live_streams]);
     }
@@ -25,19 +30,27 @@ class LiveController extends Controller
             'youtube_url' => 'required|url',
         ]);
 
-        $data = Live::create([
+        $user = auth()->user();
+
+        $live = Live::create([
+            'user_id' => $user->id,
             'title' => $request->title,
             'description' => $request->description,
             'youtube_url' => $request->youtube_url,
         ]);
 
-        return redirect()->route('live-index');
+        $unique_link = 'live/' . $live->id . '-' . Str::random(10);
+
+        $live->update(['unique_link' => $unique_link]);
+
+        return redirect()->route('live-show', ['id' => $live->id]);
+
     }
 
     public function show($id) {
-        $live = Live::find($id);
+        $live_stream = Live::find($id);
 
-        return view('live.show', ['live' => $live]);
+        return view('live.show', ['live_stream' => $live_stream]);
     }
 
     public function destroy($id) {

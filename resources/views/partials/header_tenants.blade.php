@@ -16,11 +16,7 @@
         <ul class="items-center lg:items-start flex flex-col gap-10 lg:text-white text-xl mt-16 lg:mt-0 font-semibold w-full lg:hidden" id="expanded-menu">
             <li class="flex items-center gap-3">
                 <ion-icon name="business-outline" class="w-7 h-7"></ion-icon>
-                <a href="{{route('tracking-page')}}" class="lg:hover:text-gray-300">Sua Catraca</a>
-            </li>
-            <li class="flex items-center gap-3">
-                <ion-icon name="home-outline" class="w-7 h-7"></ion-icon>
-                <a href="{{ route('live-create') }}" class="lg:hover:text-gray-300">Criar Live</a>
+                <a href="{{route('tracking-page')}}" class="lg:hover:text-gray-300">Criar sua live</a>
             </li>
             <li class="flex items-center gap-3">
                 <ion-icon name="bed-outline" class="w-7 h-7"></ion-icon>
@@ -31,12 +27,12 @@
                 <a href="{{ route('dashboard') }}" class="lg:hover:text-gray-300">Seu Perfil</a>
             </li>
             <li class="flex items-center gap-3">
-                <ion-icon name="call-outline" class="w-7 h-7"></ion-icon>
-                <a href="https://wa.me/message/KKZK74C232B7K1" target="_blank" class="lg:hover:text-gray-300">Finanças</a>
+                <ion-icon name="cloud-outline" class="w-7 h-7"></ion-icon>
+                <a href="{{route('live-index')}}" class="lg:hover:text-gray-300">Ver Todas as lives</a>
             </li>
             <li class="flex items-center gap-3">
                 <ion-icon name="log-out-outline" class="w-7 h-7"></ion-icon>
-                <a href="{{ route('dashboard') }}" class="lg:hover:text-gray-300">Logout</a>
+                <a href="{{ route('logout') }}" class="lg:hover:text-gray-300">Logout</a>
             </li>
 
         </ul>
@@ -45,16 +41,13 @@
                 <ion-icon name="business-outline" class="w-7 h-7"></ion-icon>
             </li>
             <li class="w-full flex items-center">
-                <ion-icon name="home-outline" class="w-7 h-7"></ion-icon>
-            </li>
-            <li class="w-full flex items-center">
                 <ion-icon name="bed-outline" class="w-7 h-7"></ion-icon>
             </li>
             <li class="w-full flex items-center">
                 <ion-icon name="person-outline" class="w-7 h-7"></ion-icon>
             </li>
             <li class="w-full flex items-center">
-                <ion-icon name="call-outline" class="w-7 h-7"></ion-icon>
+                <ion-icon name="cloud-outline" class="w-7 h-7"></ion-icon>
             </li>
             <li class="w-full flex items-center">
                 <ion-icon name="log-out-outline" class="w-7 h-7"></ion-icon>

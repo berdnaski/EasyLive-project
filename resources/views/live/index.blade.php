@@ -7,7 +7,7 @@
         <div class="w-screen bg-white pb-[5rem] sm:rounded-lg pt-5  xl:overflow-x-hidden lg:flex lg:flex-col lg:items-center">
             <div class="w-full flex flex-col items-center gap-3 mt-2 lg:mt-0 max-w-[2500px]">
                 <div class="flex gap-5 items-center justify-end  w-[90%] lg:ml-[62px]">
-                    <a href="{{route('live-create', ['id'])}}" class="w-10 h-10">
+                    <a href="{{ route('live-create') }}" class="w-10 h-10">
                         <ion-icon name="add-outline" class="font-semibold text-black hover:text-[#2176bc] w-full h-full"></ion-icon>
                     </a>
                 </div>
@@ -41,21 +41,37 @@
                                     <p class="text-lg">{{ $live_stream->youtube_url }}</p>
                                 </div>
 
-                                <div class="lg:w-[10%] lg:pl-2 items-center justify-center flex">
-                                    <form action="{{ route('live-destroy', ['id' => $live_stream->id]) }}" method="POST" class="flex flex-col items-center text-center">
-                                        @csrf
-                                        @method('DELETE')
+                                <div class="lg:w-[10%] lg:pl-2 gap-2 items-center justify-center flex">
+                                    <div>
+                                        <form action="{{ route('live-destroy', ['id' => $live_stream->id]) }}" method="POST" class="flex flex-col items-center text-center">
+                                            @csrf
+                                            @method('DELETE')
 
-                                        <button type="submit" class="btn btn-danger">
-                                            <ion-icon name="trash-outline" size="large" class=""></ion-icon>
+                                            <button type="submit" class="">
+                                                <ion-icon name="trash-outline" size="large" class=""></ion-icon>
+                                            </button>
+                                        </form>
+                                    </div>
+
+                                    <div>
+                                        <form action="{{ route('ticket_gate-store', ['id' => $live_stream->id]) }}" method="GET" class="flex flex-col items-center text-center">
+                                            @csrf
+
+                                            <button type="submit" class="">
+                                                <ion-icon name="enter-outline" size="large" class=""></ion-icon>
+                                            </button>
+                                        </form>
+                                    </div>
+
+                                    <div>
+                                        <button type="submit" class="">
+                                            <ion-icon name="construct-outline" size="large" class=""></ion-icon>
                                         </button>
-                                    </form>
-
+                                    </div>
                                 </div>
                             </div>
                         @endforeach
                     </div>
                 </div>
             </div>
-    </html>
 @endsection

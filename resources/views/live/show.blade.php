@@ -1,15 +1,21 @@
 @extends('layouts.layouts_menu')
 
-@section('title', 'Dashboard')
+@section('title', 'Live Details')
 
 @section('content')
-<div class="bg-red-900 h-screen flex flex-col">
-    <div class="container">
-        <h1>{{ $live->title }}</h1>
-        <p>{{ $live->description }}</p>
+<div class="bg-red-300 p-6 h-screen flex flex-col items-center lg:justify-center">
+    <h1 class="text-2xl font-semibold mb-4 lg:justify-center items-center flex">{{$live_stream->title}}</h1>
 
-        <!-- Incorporar o vídeo da live -->
-        <iframe src="{{ $live->embed_link }}" frameborder="0"></iframe>
+    <div class="p-2">
+        <div class="lg:w-[60rem] lg:h-[30rem] w-[25rem] h-[15rem]">
+            <iframe
+                width="100%"
+                height="100%"
+                src="{{ $live_stream->youtube_url }}"
+                frameborder="0"
+                allowfullscreen
+            ></iframe>
+        </div>
     </div>
 </div>
 @endsection
