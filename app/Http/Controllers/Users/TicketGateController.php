@@ -35,13 +35,26 @@ class TicketGateController extends Controller
 
         $user = auth()->user();
 
-        $live_stream = TicketGate::create([
-            'user_id' => $user->id,
-            'name' => $request->name,
-            'phone' => $request->phone,
-            'email' => $request->email,
-        ]);
+        $has_answered_form = TicketGate::where('user_id', $user->id)->exists();
 
-        return redirect()->route('live-show', ['id' => $live_stream->id]);
+        if(!$has_answered_form) {
+
+            $live_stream = TicketGate::create([
+                'user_id' => $user->id,
+                'name' => $request->name,
+                'phone' => $request->phone,
+                'email' => $request->email,
+            ]);
+
+            if(!$live_stream) {
+                return redirect()->route('live-index')->with('error', 'Erro ao criar o registro');
+            }
+
+            session()->forget(['email', 'phone', 'name']);
+
+            return redirect()->route('live-show', ['id' => $live_stream->id]);
+        }
+
+        return redirect()->route('live-create');
     }
 }
