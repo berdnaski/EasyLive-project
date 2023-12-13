@@ -53,15 +53,9 @@
                                         </form>
                                     </div>
 
-                                    <div>
-                                        <form action="{{ route('ticket_gate-store', ['id' => $live_stream->id]) }}" method="GET" class="flex flex-col items-center text-center">
-                                            @csrf
-
-                                            <button type="submit" class="">
-                                                <ion-icon name="enter-outline" size="large" class=""></ion-icon>
-                                            </button>
-                                        </form>
-                                    </div>
+                                        <a href="{{ route('ticket_gate-store', ['id' => $live_stream->id]) }}" class="flex flex-col items-center text-center">
+                                            <ion-icon name="enter-outline" size="large" class=""></ion-icon>
+                                        </a>
 
                                     <div>
                                         <button type="submit" class="">
